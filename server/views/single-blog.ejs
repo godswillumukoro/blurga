@@ -1,0 +1,22 @@
+<%- include('./partials/header') %>
+
+    <body>
+        <%- include('./partials/nav') %>
+            <div class="container main">
+                <h1 class="title">
+                    <%= blog.title %>
+                </h1>
+
+                
+                <p>
+                    <%= blog.body %>
+                </p>
+                <a class="delete" data-doc="<%= blog._id %>">delete</a>
+            </div>
+
+            <footer>
+                copyright &copy; 2022
+            </footer>
+    </body>
+
+    </html>
