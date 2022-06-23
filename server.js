@@ -8,7 +8,7 @@ const app = express();
 // const dbURI = 'mongodb://127.0.0.1:27017/node-netninja';
 const dbURI = 'process.env.DATABASE_URL';
 mongoose
-  .connect(dbURI)
+  .connect(process.env.DATABASE_URL)
   .then((result) => app.listen(process.env.PORT))
   .catch((err) => console.log(err));
 
