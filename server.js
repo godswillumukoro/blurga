@@ -4,7 +4,7 @@ const blugRoutes = require('./routes/blugRoutes');
 
 const app = express();
 // $PORT= 5000
-// $DATABASE_URL = mongodb+srv://dang:yNyhex2BozJPiut1@cluster0.q8fh9.mongodb.net/blurga?retryWrites=true&w=majority
+// $DATABASE_URL = heroku
 // const dbURI = 'mongodb://127.0.0.1:27017/node-netninja';
 const dbURI = 'process.env.DATABASE_URL';
 mongoose
