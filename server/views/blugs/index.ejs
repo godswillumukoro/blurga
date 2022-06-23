@@ -1,7 +1,7 @@
-<%- include('./partials/header') %>
+<%- include('../partials/header') %>
 
     <body>
-        <%- include('./partials/nav') %>
+        <%- include('../partials/nav') %>
             <div class="container main">
                 <h1 class="title">
                     <%= title %>
@@ -9,7 +9,7 @@
 
                                 <div class="list">
                     <% blogs.forEach(blog=> { %>
-                                    <a href="/blug/<%= blog._id %>">
+                                    <a href="/blugs/<%= blog._id %>">
                                         <h2 class="list-title">
                                                 <%= blog.title %>
                                         </h2>
@@ -20,7 +20,7 @@
                         <% }) %>
                                 </div>
             </div>
-            <%- include('./partials/footer') %>
+            <%- include('../partials/footer') %>
 
     </body>
 

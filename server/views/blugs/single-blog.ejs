@@ -1,0 +1,35 @@
+<%- include('../partials/header') %>
+
+    <body>
+        <%- include('../partials/nav') %>
+            <div class="container main mgb-2">
+                <h1 class="title">
+                    <%= blog.title %>
+                </h1>
+
+                
+                <div class="single-blog__body">
+                    <p>
+                        <%= blog.body %>
+                    </p>
+                    <a class="btn delete mgb-2" data-doc="<%= blog._id %>">delete</a>
+                </div>
+            </div>
+
+        <%- include('../partials/footer') %>
+
+        <script>
+            const trashcan = document.querySelector('a.delete');
+            trashcan.addEventListener('click', (e) => {
+                const endPoint = `/blugs/${trashcan.dataset.doc}`;
+                fetch(endPoint, {
+                    method: 'DELETE'
+                })
+                .then((response) => response.json())
+                .then((data) => window.location.href = data.redirect)
+                .catch(err => console.log(err));
+            })
+        </script>
+    </body>
+
+    </html>
