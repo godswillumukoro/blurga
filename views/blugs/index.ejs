@@ -1,0 +1,27 @@
+<%- include('../partials/header') %>
+
+    <body>
+        <%- include('../partials/nav') %>
+            <div class="container main">
+                <h1 class="title">
+                    <%= title %>
+                </h1>
+
+                                <div class="list">
+                    <% blogs.forEach(blog=> { %>
+                                    <a href="/blugs/<%= blog._id %>">
+                                        <h2 class="list-title">
+                                                <%= blog.title %>
+                                        </h2>
+                                        <p>
+                                            <%= blog.summary %>
+                                        </p>
+                                    </a>
+                        <% }) %>
+                                </div>
+            </div>
+            <%- include('../partials/footer') %>
+
+    </body>
+
+    </html>

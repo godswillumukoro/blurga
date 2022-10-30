@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Staatliches&display=swap');
+
+:root {
+    --gray: rgb(110, 110, 110);
+    --border: 6px solid var(--gray);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+    font-family: 'Staatliches', cursive;
+
+
+}
+
+p {
+    /* line-height: 1.6; */
+    font-size: 1.3rem;
+
+}
+
+.logo {
+    font-size: 4rem;
+    font-family: 'Staatliches', cursive;
+
+}
+
+.logo a:active,
+.logo a:hover {
+    text-decoration: none;
+    opacity: 1;
+    font-weight: 600;
+}
+
+.title {
+    font-size: 2.6rem;
+    margin-bottom: 2rem;
+}
+
+.list>*+* {
+    display: block;
+    margin-top: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    color: var(--gray);
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.align-c {
+    align-items: center;
+}
+
+.nav {
+    border-bottom: var(--border);
+}
+
+.nav .links {
+    font-size: 1.2rem;
+}
+
+a:hover,
+a:active {
+    opacity: .5;
+    text-decoration: underline;
+}
+
+.nav .links>*+* {
+    margin-left: 1rem;
+}
+
+.container {
+    padding: 0 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main {
+    min-height: 85vh;
+    padding-block: 4rem;
+}
+
+.spacer>*+* {
+    margin-top: 1.2rem;
+}
+
+.form {
+    background-color: var(--gray);
+    padding: 3rem 4rem;
+    display: flex;
+    flex-direction: column;
+    color: burlywood;
+}
+
+.form>label {
+    font-size: 2rem;
+}
+
+.form>* {
+    padding: .7em .2em;
+    font-size: 1.3rem;
+}
+
+.form>*+* {
+    margin: 0;
+}
+
+.footer {
+    margin-top: auto;
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    .logo {
+        font-size: 2.5rem;
+    }
+
+    .nav.flex {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .title {
+        font-size: 2.15rem;
+    }
+}
+
+.single-blog__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.single-blog__body p {
+    max-width: 80%;
+}
+
+.btn {
+    border: 0;
+    background-color: rgb(66, 51, 31);
+    color: whitesmoke;
+    border-radius: 8px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.btn:hover,
+.btn:active {
+    text-decoration: none;
+    opacity: .5;
+}
+
+.btn.delete {
+    font-size: 1rem;
+    padding: 1em 1.2em;
+    background-color: crimson;
+}
+
+.mgb-2 {
+    margin-bottom: 2rem;
+}
+
+.not-found {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: burlywood;
+    font-size: 6rem;
+}
